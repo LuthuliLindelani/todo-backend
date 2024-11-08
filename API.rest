@@ -1,0 +1,20 @@
+### VARIABLES
+@SERVER = http://localhost:8000
+
+
+### TEST IF SERVER IS UP
+GET {{SERVER}}
+
+### GET ALL TODO
+GET {{SERVER}}/api/todos
+
+### ADD A NEW TODO
+POST {{SERVER}}/api/todos
+Content-Type: application/json
+
+{
+    "text": "eating"
+}
+
+### DELETE TODO
+DELETE {{SERVER}}/api/todos/3
